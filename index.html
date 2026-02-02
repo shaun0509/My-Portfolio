@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tshepang Shaun's Portfolio | TUT</title>
+  <meta name="description" content="Tshepang Shaun Maifadi - 2nd Year IT Student at TUT, Java Programmer.">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Right Controls -->
+  <div id="top-right-controls">
+    <!-- Back Button -->
+    <button id="back-btn">Back to Welcome</button>
+
+    <!-- Profile Link -->
+    <div id="profile-link">
+      <img src="images\IMG-20251209-WA0064.jpg" alt="Profile Picture" id="top-profile-pic">
+      <a href="profile.html">Go to Profile</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Tshepang Shaun Maifadi</h1>
+    <p>3rd Year Information Technology Student</p>
+    <p>Tshwane University of Technology | Java Programmer</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About T.S Maifadi</h2>
+    <p>
+      I am a dedicated 3rd year Information Technology student at Tshwane University of Technology.
+      I specialize in Java programming and enjoy building software applications that solve real-world problems.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <span>Java</span>
+      <span>Object-Oriented Programming</span>
+      <span>Data Structures</span>
+      <span>Basic SQL</span>
+      <span>HTML & CSS</span>
+      <span>Networking</span>
+      <span>Problem Solving</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <a href="https://github.com/shaun0509/EduLoom" target="_blank" class="card">
+        <h3>EduLoom Learning App</h3>
+        <p>Learning platform that tracks student progress.</p>
+        <p><strong>Tech:</strong> Java, HTML, CSS</p>
+      </a>
+
+      <a href="https://github.com/shaun0509/Simple-Bank-app.java" target="_blank" class="card">
+        <h3>Simple Banking App</h3>
+        <p>Java app for deposits, withdrawals, and balance checks.</p>
+        <p><strong>Tech:</strong> Java, OOP</p>
+      </a>
+
+      <a href="https://github.com/shaun0809/Boat-Rental-Java" target="_blank" class="card">
+        <h3>Boat Rental App</h3>
+        <p>Console-based booking system.</p>
+        <p><strong>Tech:</strong> Java</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="certificates">
+      <a href="https://www.credly.com/users/tshepang-maifadi" target="_blank" class="card">
+        <h3>Introduction to Cybersecurity</h3>
+        <p>View Credly Badge</p>
+      </a>
+
+      <a href="certificates/fnb-app-academy.pdf" target="_blank" class="card">
+        <h3>FNB App Academy – 2025</h3>
+        <p>Full Stack Development</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:tshepang.mshaun05@email.com">tshepang.mshaun05@email.com</a></p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/shaun0809" target="_blank">github.com/shaun0809</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tshepang Shaun Maifadi | IT Student – TUT</p>
+  </footer>
+
+  <!-- Back Button Script -->
+  <script>
+    const backBtn = document.getElementById('back-btn');
+    backBtn.addEventListener('click', () => {
+      document.body.style.opacity = 0;
+      setTimeout(() => {
+        window.location.href = "welcome.html";
+      }, 800);
+    });
+  </script>
+</body>
+</html>

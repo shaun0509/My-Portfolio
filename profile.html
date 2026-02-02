@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tshepang Shaun Profile | TUT</title>
+  <meta name="description" content="Tshepang Shaun Maifadi - IT Student Profile">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Back Button Top Right -->
+  <div id="top-right-controls">
+    <button id="back-btn">Back to Portfolio</button>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <img id="profile-pic" src="images\IMG-20251209-WA0064.jpg" alt="Tshepang Shaun Profile">
+    <h1>Tshepang Shaun Maifadi</h1>
+    <p>3rd Year Information Technology Student</p>
+    <p>Tshwane University of Technology | Java Programmer</p>
+  </header>
+
+  <!-- About / Profile Info -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I’m Tshepang Shaun, a 3rd year Information Technology student at Tshwane University of Technology.
+      I specialize in Java programming, software development, and problem-solving. I enjoy creating applications that
+      solve real-world problems and improving my programming skills every day.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <span>Java</span>
+      <span>Object-Oriented Programming</span>
+      <span>Data Structures</span>
+      <span>Basic SQL</span>
+      <span>HTML & CSS</span>
+      <span>Networking</span>
+      <span>Problem Solving</span>
+    </div>
+  </section>
+
+  <!-- Contact Links -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:tshepang.mshaun05@email.com">tshepang.mshaun05@email.com</a></p>
+    <p><i class="fab fa-github"></i> <a href="https://github.com/shaun0809" target="_blank">github.com/shaun0809</a></p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tshepang Shaun Maifadi | IT Student – TUT</p>
+  </footer>
+
+  <!-- Back Button Script -->
+  <script>
+    const backBtn = document.getElementById('back-btn');
+    backBtn.addEventListener('click', () => {
+      document.body.style.opacity = 0;
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 800);
+    });
+  </script>
+
+</body>
+</html>

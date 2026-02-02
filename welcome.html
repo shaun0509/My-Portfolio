@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome | Tshepang Shaun</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ===== Body & Layout ===== */
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, #667eea, #764ba2, #00c6ff);
+      background-size: 300% 300%;
+      animation: gradientMove 8s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      overflow: hidden;
+      flex-direction: column;
+      text-align: center;
+      transition: opacity 1s ease;
+      opacity: 1;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+
+    /* ===== Tech Icons Floating ===== */
+    .tech-icons i {
+      font-size: 2.2rem;
+      margin: 0 10px;
+      color: #fff;
+      animation: floatIcon 3s ease-in-out infinite;
+    }
+
+    .tech-icons i:nth-child(2) { animation-delay: 0.3s; }
+    .tech-icons i:nth-child(3) { animation-delay: 0.6s; }
+    .tech-icons i:nth-child(4) { animation-delay: 0.9s; }
+    .tech-icons i:nth-child(5) { animation-delay: 1.2s; }
+
+    @keyframes floatIcon {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* ===== Next Button ===== */
+    #next-btn {
+      margin-top: 2rem;
+      padding: 0.7rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      background: linear-gradient(135deg, #00f2fe, #4facfe);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0, 242, 254, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    #next-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="typing-text"></h1>
+  <p>Welcome to My IT Portfolio</p>
+
+  <div class="tech-icons">
+    <i class="fas fa-code"></i>
+    <i class="fas fa-laptop-code"></i>
+    <i class="fas fa-database"></i>
+    <i class="fab fa-java"></i>
+    <i class="fas fa-network-wired"></i>
+  </div>
+
+  <button id="next-btn">Next</button>
+
+  <script>
+    const text = "Hello, I'm Tshepang Shaun";
+    let index = 0;
+    const typingText = document.getElementById("typing-text");
+    const body = document.body;
+
+    function typeEffect() {
+      if (index < text.length) {
+        typingText.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 90);
+      }
+    }
+
+    function goToPortfolio() {
+      body.style.opacity = 0; // fade out
+      setTimeout(() => {
+        window.location.href = "index.html"; // redirect
+      }, 1000); // match transition duration
+    }
+
+    window.onload = () => {
+      typeEffect();
+      // auto-redirect after 5 seconds
+      setTimeout(goToPortfolio, 5000);
+    };
+
+    // Next button click
+    document.getElementById('next-btn').addEventListener('click', goToPortfolio);
+  </script>
+
+</body>
+</html>
