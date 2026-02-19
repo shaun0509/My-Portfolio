@@ -3,134 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tshepang Shaun's Portfolio | TUT</title>
-  <meta name="description" content="Tshepang Shaun Maifadi - 2nd Year IT Student at TUT, Java Programmer.">
+  <title>Welcome | Tshepang Shaun</title>
 
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ===== Body & Layout ===== */
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, #667eea, #764ba2, #00c6ff);
+      background-size: 300% 300%;
+      animation: gradientMove 8s ease infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      overflow: hidden;
+      flex-direction: column;
+      text-align: center;
+      transition: opacity 1s ease;
+      opacity: 1;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+
+    /* ===== Tech Icons Floating ===== */
+    .tech-icons i {
+      font-size: 2.2rem;
+      margin: 0 10px;
+      color: #fff;
+      animation: floatIcon 3s ease-in-out infinite;
+    }
+
+    .tech-icons i:nth-child(2) { animation-delay: 0.3s; }
+    .tech-icons i:nth-child(3) { animation-delay: 0.6s; }
+    .tech-icons i:nth-child(4) { animation-delay: 0.9s; }
+    .tech-icons i:nth-child(5) { animation-delay: 1.2s; }
+
+    @keyframes floatIcon {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-14px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* ===== Next Button ===== */
+    #next-btn {
+      margin-top: 2rem;
+      padding: 0.7rem 2rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      background: linear-gradient(135deg, #00f2fe, #4facfe);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(0, 242, 254, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    #next-btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Top Right Controls -->
-  <div id="top-right-controls">
-    <!-- Back Button -->
-    <button id="back-btn">Back to Welcome</button>
+  <h1 id="typing-text"></h1>
+  <p>Welcome to My IT Portfolio</p>
 
-    <!-- Profile Link -->
-    <div id="profile-link">
-      <img src="IMG-20251209-WA0064.jpg" alt="Profile Picture" id="top-profile-pic">
-      <a href="profile.html">Go to Profile</a>
-    </div>
+  <div class="tech-icons">
+    <i class="fas fa-code"></i>
+    <i class="fas fa-laptop-code"></i>
+    <i class="fas fa-database"></i>
+    <i class="fab fa-java"></i>
+    <i class="fas fa-network-wired"></i>
   </div>
 
-  <!-- Header -->
-  <header>
-    <h1>Tshepang Shaun Maifadi</h1>
-    <p>3rd Year Information Technology Student</p>
-    <p>Tshwane University of Technology | Java Programmer</p>
-  </header>
+  <button id="next-btn">Next</button>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- About -->
-  <section id="about">
-    <h2>About T.S Maifadi</h2>
-    <p>
-      I am a dedicated 3rd year Information Technology student at Tshwane University of Technology.
-      I specialize in Java programming and enjoy building software applications that solve real-world problems.
-    </p>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills">
-      <span>Java</span>
-      <span>Object-Oriented Programming</span>
-      <span>Data Structures</span>
-      <span>Basic SQL</span>
-      <span>HTML & CSS</span>
-      <span>Networking</span>
-      <span>Problem Solving</span>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <a href="https://github.com/shaun0509/EduLoom" target="_blank" class="card">
-        <h3>EduLoom Learning App</h3>
-        <p>Learning platform that tracks student progress.</p>
-        <p><strong>Tech:</strong> Java, HTML, CSS</p>
-      </a>
-
-      <a href="https://github.com/shaun0509/Simple-Bank-app.java" target="_blank" class="card">
-        <h3>Simple Banking App</h3>
-        <p>Java app for deposits, withdrawals, and balance checks.</p>
-        <p><strong>Tech:</strong> Java, OOP</p>
-      </a>
-
-      <a href="https://github.com/shaun0809/Boat-Rental-Java" target="_blank" class="card">
-        <h3>Boat Rental App</h3>
-        <p>Console-based booking system.</p>
-        <p><strong>Tech:</strong> Java</p>
-      </a>
-    </div>
-  </section>
-
-  <!-- Certificates -->
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <div class="certificates">
-      <a href="https://www.credly.com/users/tshepang-maifadi" target="_blank" class="card">
-        <h3>Introduction to Cybersecurity</h3>
-        <p>View Credly Badge</p>
-      </a>
-
-      <a href="certificates/fnb-app-academy.pdf" target="_blank" class="card">
-        <h3>FNB App Academy – 2025</h3>
-        <p>Full Stack Development</p>
-      </a>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><i class="fas fa-envelope"></i> <a href="mailto:tshepang.mshaun05@email.com">tshepang.mshaun05@email.com</a></p>
-    <p><i class="fab fa-github"></i> <a href="https://github.com/shaun0809" target="_blank">github.com/shaun0809</a></p>
-    <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Tshepang Shaun Maifadi | IT Student – TUT</p>
-  </footer>
-
-  <!-- Back Button Script -->
   <script>
-    const backBtn = document.getElementById('back-btn');
-    backBtn.addEventListener('click', () => {
-      document.body.style.opacity = 0;
+    const text = "Hello, I'm Tshepang Shaun";
+    let index = 0;
+    const typingText = document.getElementById("typing-text");
+    const body = document.body;
+
+    function typeEffect() {
+      if (index < text.length) {
+        typingText.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 90);
+      }
+    }
+
+    function goToPortfolio() {
+      body.style.opacity = 0; // fade out
       setTimeout(() => {
-        window.location.href = "welcome.html";
-      }, 800);
-    });
+        window.location.href = "detailsite.html"; // redirect
+      }, 1000); // match transition duration
+    }
+
+    window.onload = () => {
+      typeEffect();
+      // auto-redirect after 5 seconds
+      setTimeout(goToPortfolio, 5000);
+    };
+
+    // Next button click
+    document.getElementById('next-btn').addEventListener('click', goToPortfolio);
   </script>
+
 </body>
 </html>
-
-
-
